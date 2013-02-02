@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alarm!</title>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css"></link>
+    <!--<script src="../javascript/Clock.js"></script>-->
+    <script src="../javascript/View.js"></script>
+</head>
+<body>
+    <h1>Alarm!</h1>
+    <div>
+        <h2>Current time</h2>
+        <div id="clock" class="clock"></div>
+        <div class="secondsHolder">
+            <div id="seconds" class="seconds"></div>
+        </div>
+    </div>
+    <div>
+        <h2>Current alarms</h2>
+        <ul id="alarms" class="alarms"></ul>
+        <span>Click on any alarm to remove it</span>
+    </div>
+    <div id="newAlarm">
+        <h2>Add a new alarm</h2>
+        <input type="time" id="time">
+        <input type="button" id="ok" value="Add alarm">
+    </div>
+    <iframe src="../../test/runner.html" class="tests"></iframe>
+</body>
+</html>

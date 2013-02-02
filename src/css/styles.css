@@ -1,0 +1,46 @@
+.seconds {
+    background: #4169e1;
+    height: 5px;
+    width: 0;
+}
+
+.secondsHolder {
+    background: #9ca9de;
+    border: solid #999 1px;
+    border-top: none;
+    height: 5px;
+    width: 170px;
+
+}
+
+body>div {
+    display: inline-block;
+    margin: 30px;
+}
+body {
+    vertical-align: top;
+}
+
+.tests {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+}
+
+.clock {
+    text-align: center;
+    vertical-align: middle;
+    width: 150px;
+    padding: 10px;
+    font-family: monospace, sans-serif;
+    font-size: 40px;
+    border: solid #999 1px;
+    border-bottom: none;
+    background-color: #e6ebff;
+}
+
+h1 {
+    margin-left: 20%;
+}
