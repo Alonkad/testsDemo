@@ -6,10 +6,10 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/SpecRunner.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359282005531" ignored="false" />
     <file path="/TrimSpec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359297849343" ignored="false" />
-    <file path="/runner.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359383993930" ignored="false" />
+    <file path="/runner.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360747172963" ignored="false" />
     <file path="/WixTrim.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359283231022" ignored="false" />
     <file path="/Clock.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359974704711" ignored="false" />
-    <file path="/clock.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359966626902" ignored="false" />
+    <file path="/clock.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360747064274" ignored="false" />
     <file path="/View.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359378360666" ignored="false" />
     <file path="/styles.css" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359966666480" ignored="false" />
     <file path="/ClockSpec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359974468326" ignored="false" />
@@ -52,6 +52,7 @@
     <file path="/specRunner.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360238586525" ignored="false" />
     <file path="$PROJECT_DIR$/../js-tutorial/test/specs/js-tutorial.spec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360238827039" ignored="false" />
     <file path="/js-tutorial.spec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360238811428" ignored="false" />
+    <file path="/Clock.spec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360747422072" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,8 +114,10 @@
       <file leaf-file-name="runner.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/runner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="-7.5">
-              <folding />
+            <state line="9" column="24" selection-start="410" selection-end="410" vertical-scroll-proportion="14.916667">
+              <folding>
+                <element signature="n#style#0;n#iframe#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,34 +134,25 @@
       <file leaf-file-name="clock.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/html/clock.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="26" selection-start="209" selection-end="209" vertical-scroll-proportion="-5.0">
+            <state line="20" column="22" selection-start="589" selection-end="595" vertical-scroll-proportion="-11.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Clock.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Clock.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/Clock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="6" selection-start="131" selection-end="131" vertical-scroll-proportion="0.16773163">
+            <state line="7" column="6" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Clock.spec.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Clock.spec.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/specs/Clock.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClockController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javascript/ClockController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="34" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+            <state line="23" column="55" selection-start="909" selection-end="909" vertical-scroll-proportion="0.42577487">
               <folding />
             </state>
           </provider>
@@ -176,7 +170,7 @@
       <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="14" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
+            <state line="27" column="12" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -211,12 +205,12 @@
         <option value="$PROJECT_DIR$/src/javascript/Controller.js" />
         <option value="$PROJECT_DIR$/test/specs/ClockControllerSpec.js" />
         <option value="$PROJECT_DIR$/src/javascript/ClockController.js" />
-        <option value="$PROJECT_DIR$/src/css/styles.css" />
         <option value="$PROJECT_DIR$/test/specs/ClockSpec.js" />
-        <option value="$PROJECT_DIR$/test/specs/Clock.spec.js" />
-        <option value="$PROJECT_DIR$/test/runner.html" />
-        <option value="$PROJECT_DIR$/src/html/clock.html" />
         <option value="$PROJECT_DIR$/src/javascript/Clock.js" />
+        <option value="$PROJECT_DIR$/src/css/styles.css" />
+        <option value="$PROJECT_DIR$/src/html/clock.html" />
+        <option value="$PROJECT_DIR$/test/runner.html" />
+        <option value="$PROJECT_DIR$/test/specs/Clock.spec.js" />
       </list>
     </option>
   </component>
@@ -638,13 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="14" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/lib/jasmine/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="8" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
@@ -666,30 +653,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/specs/Clock.spec.js">
+    <entry file="file://$PROJECT_DIR$/src/javascript/Clock.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="7" column="6" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="12" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/runner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="-7.5">
-          <folding />
+        <state line="9" column="24" selection-start="410" selection-end="410" vertical-scroll-proportion="14.916667">
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/html/clock.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="209" selection-end="209" vertical-scroll-proportion="-5.0">
+        <state line="20" column="22" selection-start="589" selection-end="595" vertical-scroll-proportion="-11.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/Clock.js">
+    <entry file="file://$PROJECT_DIR$/test/specs/Clock.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="131" selection-end="131" vertical-scroll-proportion="0.16773163">
+        <state line="23" column="55" selection-start="909" selection-end="909" vertical-scroll-proportion="0.42577487">
           <folding />
         </state>
       </provider>
