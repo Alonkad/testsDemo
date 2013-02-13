@@ -8,15 +8,15 @@
     <file path="/TrimSpec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359297849343" ignored="false" />
     <file path="/runner.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360747172963" ignored="false" />
     <file path="/WixTrim.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359283231022" ignored="false" />
-    <file path="/Clock.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359974704711" ignored="false" />
-    <file path="/clock.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360747064274" ignored="false" />
+    <file path="/Clock.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360762146680" ignored="false" />
+    <file path="/clock.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360759551359" ignored="false" />
     <file path="/View.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359378360666" ignored="false" />
     <file path="/styles.css" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359966666480" ignored="false" />
     <file path="/ClockSpec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359974468326" ignored="false" />
     <file path="/Controller.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359384391643" ignored="false" />
     <file path="/ClockControllerSpec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359383855098" ignored="false" />
     <file path="/ClockController.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359384125732" ignored="false" />
-    <file path="/fragment.js2" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359716988248" ignored="false" />
+    <file path="/fragment.js2" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360761592348" ignored="false" />
     <file path="/Dummy.txt" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359715221576" ignored="false" />
     <file path="$PROJECT_DIR$/../grunt-aggregator/target/css.json" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359640502781" ignored="false" />
     <file path="$PROJECT_DIR$/../grunt-aggregator/target/css.debug.json" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1359640502781" ignored="false" />
@@ -52,7 +52,8 @@
     <file path="/specRunner.html" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360238586525" ignored="false" />
     <file path="$PROJECT_DIR$/../js-tutorial/test/specs/js-tutorial.spec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360238827039" ignored="false" />
     <file path="/js-tutorial.spec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360238811428" ignored="false" />
-    <file path="/Clock.spec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360747422072" ignored="false" />
+    <file path="/Clock.spec.js" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360762502998" ignored="false" />
+    <file path="$PROJECT_DIR$/../gilche/config/config.src.json" changelist="7125f78b-e9ce-42b6-a3dd-9e49f2352eb9" time="1360758005841" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +115,7 @@
       <file leaf-file-name="runner.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/runner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="24" selection-start="410" selection-end="410" vertical-scroll-proportion="14.916667">
+            <state line="10" column="36" selection-start="460" selection-end="460" vertical-scroll-proportion="-7.5">
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -134,7 +135,16 @@
       <file leaf-file-name="clock.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/html/clock.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="22" selection-start="589" selection-end="595" vertical-scroll-proportion="-11.75">
+            <state line="33" column="34" selection-start="957" selection-end="957" vertical-scroll-proportion="-21.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClockController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javascript/ClockController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="34" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,7 +153,7 @@
       <file leaf-file-name="Clock.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javascript/Clock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="6" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+            <state line="10" column="21" selection-start="348" selection-end="348" vertical-scroll-proportion="-9.6">
               <folding />
             </state>
           </provider>
@@ -152,7 +162,7 @@
       <file leaf-file-name="Clock.spec.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/specs/Clock.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="55" selection-start="909" selection-end="909" vertical-scroll-proportion="0.42577487">
+            <state line="77" column="46" selection-start="2767" selection-end="2767" vertical-scroll-proportion="0.685155">
               <folding />
             </state>
           </provider>
@@ -206,11 +216,11 @@
         <option value="$PROJECT_DIR$/test/specs/ClockControllerSpec.js" />
         <option value="$PROJECT_DIR$/src/javascript/ClockController.js" />
         <option value="$PROJECT_DIR$/test/specs/ClockSpec.js" />
-        <option value="$PROJECT_DIR$/src/javascript/Clock.js" />
         <option value="$PROJECT_DIR$/src/css/styles.css" />
-        <option value="$PROJECT_DIR$/src/html/clock.html" />
         <option value="$PROJECT_DIR$/test/runner.html" />
+        <option value="$PROJECT_DIR$/src/html/clock.html" />
         <option value="$PROJECT_DIR$/test/specs/Clock.spec.js" />
+        <option value="$PROJECT_DIR$/src/javascript/Clock.js" />
       </list>
     </option>
   </component>
@@ -327,6 +337,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="javascript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testsDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testsDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -361,7 +393,7 @@
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gilche" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -531,7 +563,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15802269" sideWeight="0.97094804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15802269" sideWeight="0.97094804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -639,23 +671,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/ClockController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javascript/View.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javascript/Clock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -669,23 +687,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/runner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="24" selection-start="410" selection-end="410" vertical-scroll-proportion="14.916667">
+        <state line="10" column="36" selection-start="460" selection-end="460" vertical-scroll-proportion="-7.5">
           <folding>
             <element signature="n#style#0;n#iframe#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/ClockController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="34" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/libs/jquery-1.9.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.025423728">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/html/clock.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="589" selection-end="595" vertical-scroll-proportion="-11.75">
+        <state line="33" column="34" selection-start="957" selection-end="957" vertical-scroll-proportion="-21.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javascript/Clock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="21" selection-start="348" selection-end="348" vertical-scroll-proportion="-9.6">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/specs/Clock.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="55" selection-start="909" selection-end="909" vertical-scroll-proportion="0.42577487">
+        <state line="77" column="46" selection-start="2767" selection-end="2767" vertical-scroll-proportion="0.685155">
           <folding />
         </state>
       </provider>
