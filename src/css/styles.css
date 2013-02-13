@@ -40,6 +40,10 @@ body {
     border-bottom: none;
     background-color: #e6ebff;
 }
+.alarm-message {
+    display: block;
+    width: 158px;
+}
 
 h1 {
     margin-left: 20%;
