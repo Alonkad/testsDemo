@@ -83,6 +83,7 @@ describe('Clock tests demo:', function () {
         });
         describe('when an alarm is added', function () {
             it('should add an element to the current alarms', function () {
+                spyOn(window, 'alert'); //TODO: Is there another, better way to get rid of the alerts in testing?
                 var numberOfAlarmsInAlarmsListBefore = $('#alarms').children().length;
                 this.view.message.value = "test";
                 this.view.time.valueAsDate = new Date(Date.now() + 1000);
