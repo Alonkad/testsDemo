@@ -6,14 +6,17 @@ var Clock = (function () {
     ClockClass.prototype = {
         onOkClick: function () {
             if ($('#message').val() && $('#time').val()) {
-                var timeToAlarm = $('#time')[0].valueAsDate - Date.now();
+                var msSinceMidnight = new Date().getTime() % (24 * 60 * 60 * 1000);
+                var alarmTimeInMS = new Date($('#time')[0].valueAsNumber).getTime();
+                var msLeftToAlarm = alarmTimeInMS - msSinceMidnight;
+
                 setTimeout(function(){
                     alert($('#message').val());
-                }, timeToAlarm);
+                }, msLeftToAlarm);
             } else {
                 alert('Invalid input');
             }
         }
-    }
+    };
     return ClockClass;
 })();

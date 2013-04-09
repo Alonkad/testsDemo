@@ -1,4 +1,4 @@
-describe('Clock tests demo', function () {
+describe('Clock tests demo:', function () {
     beforeEach(function () {
         this.view = {};
         this.view.message = $('#message')[0];
@@ -28,20 +28,20 @@ describe('Clock tests demo', function () {
         });
     });
 
-    describe('basic functionality', function () {
+    describe('basic functionality:', function () {
         describe('when the ok button is clicked', function () {
             describe('if the message or time are NOT set', function () {
                 it('should alert the user', function () {
-                    spyOn(this.viewWindow, 'alert');
+                    spyOn(window, 'alert');
 
                     this.view.ok.click();
 
-                    expect(this.viewWindow.alert).toHaveBeenCalledWith('Invalid input');
+                    expect(alert).toHaveBeenCalledWith('Invalid input');
                 });
             });
         });
         describe('when the time is set to future time', function () {
-            it('should not alert the user with the alarm message before the alarm time', function () {
+            it('should alert the user with a message when it\'s time', function () {
                 jasmine.Clock.useMock();
                 spyOn(window, 'alert');
                 var testMessage = "future alarm test";
@@ -49,10 +49,10 @@ describe('Clock tests demo', function () {
                 this.view.message.value = testMessage;
                 this.view.time.valueAsDate = new Date(Date.now() + 1000);
                 this.view.ok.click();
-
-                jasmine.Clock.tick(999);
+                                                    // debugger
+                jasmine.Clock.tick(998);
                 expect(alert).not.toHaveBeenCalled();
-                jasmine.Clock.tick(100);
+                jasmine.Clock.tick(10);
                 expect(alert).toHaveBeenCalledWith(testMessage);
             });
         });
