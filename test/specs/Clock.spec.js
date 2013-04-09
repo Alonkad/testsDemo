@@ -49,7 +49,7 @@ describe('Clock tests demo:', function () {
                 this.view.message.value = testMessage;
                 this.view.time.valueAsDate = new Date(Date.now() + 1000);
                 this.view.ok.click();
-                                                    // debugger
+
                 jasmine.Clock.tick(998);
                 expect(alert).not.toHaveBeenCalled();
                 jasmine.Clock.tick(10);

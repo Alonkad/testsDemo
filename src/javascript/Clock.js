@@ -6,9 +6,12 @@ var Clock = (function () {
     ClockClass.prototype = {
         onOkClick: function () {
             if ($('#message').val() && $('#time').val()) {
-                var msSinceMidnight = new Date().getTime() % (24 * 60 * 60 * 1000);
-                var alarmTimeInMS = new Date($('#time')[0].valueAsNumber).getTime();
-                var msLeftToAlarm = alarmTimeInMS - msSinceMidnight;
+                var now = new Date();
+                var alarmDate = new Date($('#time')[0].valueAsNumber);
+                alarmDate.setUTCFullYear(now.getUTCFullYear());
+                alarmDate.setUTCMonth(now.getUTCMonth());
+                alarmDate.setUTCDate(now.getUTCDate());
+                var msLeftToAlarm = alarmDate.getTime() - now.getTime();
 
                 setTimeout(function(){
                     alert($('#message').val());
