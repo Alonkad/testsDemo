@@ -30,10 +30,21 @@ describe('Clock tests demo:', function () {
 
     describe('basic functionality:', function () {
         describe('when the ok button is clicked', function () {
-            describe('if the message or time are NOT set', function () {
+            describe('if the message is NOT set', function () {
                 it('should alert the user', function () {
                     spyOn(window, 'alert');
 
+                    this.view.time.valueAsDate = new Date(Date.now() - 1000);
+                    this.view.ok.click();
+
+                    expect(alert).toHaveBeenCalledWith('Invalid input');
+                });
+            });
+            describe('if the time is NOT set', function () {
+                it('should alert the user', function () {
+                    spyOn(window, 'alert');
+
+                    this.view.message.value = "message without time";
                     this.view.ok.click();
 
                     expect(alert).toHaveBeenCalledWith('Invalid input');
