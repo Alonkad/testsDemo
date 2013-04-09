@@ -50,11 +50,26 @@ describe('Clock tests demo:', function () {
                 this.view.time.valueAsDate = new Date(Date.now() + 1000);
                 this.view.ok.click();
 
-                jasmine.Clock.tick(998);
+                jasmine.Clock.tick(900);
                 expect(alert).not.toHaveBeenCalled();
-                jasmine.Clock.tick(10);
+                jasmine.Clock.tick(100);
                 expect(alert).toHaveBeenCalledWith(testMessage);
             });
         });
+        describe('when the time is set to the past', function () {
+            it('should NOT alert the user with a message', function () {
+                jasmine.Clock.useMock();
+                spyOn(window, 'alert');
+                var testMessage = "past alarm test";
+
+                this.view.message.value = testMessage;
+                this.view.time.valueAsDate = new Date(Date.now() - 1000);
+                this.view.ok.click();
+
+                jasmine.Clock.tick(2*365*24*60*60*1000);
+                expect(alert).not.toHaveBeenCalled();
+            });
+        });
     });
+
 });
