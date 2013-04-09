@@ -70,6 +70,17 @@ describe('Clock tests demo:', function () {
                 expect(alert).not.toHaveBeenCalled();
             });
         });
+        describe('when an alarm is added', function () {
+            it('should add an element to the current alarms', function () {
+                var numberOfAlarmsInAlarmsListBefore = $('#alarms').children().length;
+                this.view.message.value = "test";
+                this.view.time.valueAsDate = new Date(Date.now() + 1000);
+                this.view.ok.click();
+                var numberOfAlarmsInAlarmsListAfter = $('#alarms').children().length;
+
+                expect(numberOfAlarmsInAlarmsListAfter - numberOfAlarmsInAlarmsListBefore).toBe(1);
+            });
+        });
     });
 
 });
