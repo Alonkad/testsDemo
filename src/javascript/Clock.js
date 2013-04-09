@@ -13,8 +13,14 @@ var Clock = (function () {
                 alarmDate.setUTCDate(now.getUTCDate());
                 var msLeftToAlarm = alarmDate.getTime() - now.getTime();
 
+                var alarmsList = $('#alarms');
+                alarmsList.append('<li>' + $('#message').val() + '</li>');
+                var currentAlarm = alarmsList.find('li:last');
+
+
                 setTimeout(function(){
                     alert($('#message').val());
+                    currentAlarm.remove();
                 }, msLeftToAlarm);
             } else {
                 alert('Invalid input');

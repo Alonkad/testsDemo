@@ -83,6 +83,7 @@ describe('Clock tests demo:', function () {
         });
         describe('when an alarm is added', function () {
             it('should add an element to the current alarms', function () {
+                jasmine.Clock.useMock();
                 spyOn(window, 'alert'); //TODO: Is there another, better way to get rid of the alerts in testing?
                 var numberOfAlarmsInAlarmsListBefore = $('#alarms').children().length;
                 this.view.message.value = "test";
@@ -91,6 +92,22 @@ describe('Clock tests demo:', function () {
                 var numberOfAlarmsInAlarmsListAfter = $('#alarms').children().length;
 
                 expect(numberOfAlarmsInAlarmsListAfter - numberOfAlarmsInAlarmsListBefore).toBe(1);
+            });
+        });
+        describe('when an alarm goes off', function () {
+            it('should remove the element from the current alarms', function () {
+                jasmine.Clock.useMock();
+                spyOn(window, 'alert'); //TODO: Is there another, better way to get rid of the alerts in testing?
+
+                this.view.message.value = "when an alarm goes off";
+                this.view.time.valueAsDate = new Date(Date.now() + 7000);
+                this.view.ok.click();
+                jasmine.Clock.tick(6900);
+                var numberOfAlarmsInAlarmsListBefore = $('#alarms').children().length;
+                jasmine.Clock.tick(200);
+                var numberOfAlarmsInAlarmsListAfter = $('#alarms').children().length;
+
+                expect(numberOfAlarmsInAlarmsListAfter - numberOfAlarmsInAlarmsListBefore).toBe(-1);
             });
         });
     });
