@@ -5,8 +5,45 @@
     <link rel="stylesheet" href="../css/styles.css" type="text/css"></link>
     <script src="../javascript/libs/jquery-1.9.1.js"></script>
 
+
+    <link rel="shortcut icon" type="image/png" href="../jasmine/images/jasmine_favicon.png">
+    <link rel="stylesheet" href="../../jasmine/lib/jasmine-core/jasmine.css" type="text/css">
+
+    <script src="../../jasmine/lib/jasmine-core/jasmine.js"></script>
+    <script src="../../jasmine/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="../../test/specs/Clock.spec.js"></script>
+
     <script src="../javascript/Clock.js"></script>
     <script src="../javascript/View.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+
+            var htmlReporter = new jasmine.HtmlReporter();
+
+            jasmineEnv.addReporter(htmlReporter);
+
+            jasmineEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            var currentWindowOnload = window.onload;
+
+            window.onload = function () {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+
+        })();
+    </script>
 </head>
 <body>
     <h1>Alarm!</h1>
@@ -29,10 +66,8 @@
         <input type="button" id="ok" value="Add alarm">
     </div>
 
-
     <script>
         var myClock = new Clock();
     </script>
-
 </body>
 </html>

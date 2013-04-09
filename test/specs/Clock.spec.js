@@ -1,11 +1,5 @@
 describe('Clock tests demo', function () {
-    var $;
-
     beforeEach(function () {
-        var iframe = document.getElementById('view');
-        this.viewWindow = iframe.contentWindow;
-        $ = this.viewWindow.$;
-
         this.view = {};
         this.view.message = $('#message')[0];
         this.view.time = $('#time')[0];
@@ -16,21 +10,20 @@ describe('Clock tests demo', function () {
 
     });
 
-
     describe('acceptance', function () {
         it('should set alarms and alert the user with the alarm message at the alarm time', function () {
-            spyOn(this.viewWindow, 'alert');
+            spyOn(window, 'alert');
 
             this.view.message.value = "test";
             this.view.time.valueAsDate = new Date(Date.now() + 1);
             this.view.ok.click();
 
-            expect(this.viewWindow.alert).not.toHaveBeenCalled();
+            expect(alert).not.toHaveBeenCalled();
             waitsFor(function () {
-                return this.viewWindow.alert.callCount;
+                return alert.callCount;
             }, 'alert to be called', 20);
             runs(function () {
-                expect(this.viewWindow.alert).toHaveBeenCalledWith('test');
+                expect(alert).toHaveBeenCalledWith('test');
             });
         });
     });
@@ -50,7 +43,7 @@ describe('Clock tests demo', function () {
         describe('when the time is set to future time', function () {
             it('should not alert the user with the alarm message before the alarm time', function () {
                 jasmine.Clock.useMock();
-                spyOn(this.viewWindow, 'alert');
+                spyOn(window, 'alert');
                 var testMessage = "future alarm test";
 
                 this.view.message.value = testMessage;
@@ -58,9 +51,9 @@ describe('Clock tests demo', function () {
                 this.view.ok.click();
 
                 jasmine.Clock.tick(999);
-                expect(this.viewWindow.alert).not.toHaveBeenCalled();
-                jasmine.Clock.tick(1);
-                expect(this.viewWindow.alert).toHaveBeenCalledWith(testMessage);
+                expect(alert).not.toHaveBeenCalled();
+                jasmine.Clock.tick(100);
+                expect(alert).toHaveBeenCalledWith(testMessage);
             });
         });
     });
