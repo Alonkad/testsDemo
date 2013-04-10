@@ -74,6 +74,13 @@ describe('Clock tests demo:', function () {
                 jasmine.Clock.tick(2 * 365 * 24 * 60 * 60 * 1000);
                 expect(alert).not.toHaveBeenCalled();
             });
+            it('should NOT add an item to the alarms list', function () {
+                var aSecondAgo = -1000;
+
+                this.setAlarm('past alarm test', aSecondAgo);
+
+                expect($('#alarms').children().length).toEqual(0);
+            });
         });
         describe('when an alarm is added', function () {
             it('should add an item to the alarms list', function () {

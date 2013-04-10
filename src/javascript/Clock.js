@@ -13,20 +13,19 @@ var Clock = (function () {
                 alarmDate.setUTCDate(now.getUTCDate());
                 var msLeftToAlarm = alarmDate.getTime() - now.getTime();
 
+                if (msLeftToAlarm <= 0) return;
+
                 var alarmsList = $('#alarms');
                 alarmsList.append('<li>' + $('#message').val() + '</li>');
                 var currentAlarm = alarmsList.find('li:last');
-
 
                 var alarmTimeOut = setTimeout(function () {
                     alert($('#message').val());
                     currentAlarm.remove();
                 }, msLeftToAlarm);
-//                 debugger;
 
                 currentAlarm.click(function () {
                     console.log("clicked: " + $('#message').val() + "(" + alarmTimeOut + ")");
-//                    debugger;
                     clearTimeout(alarmTimeOut);
                     currentAlarm.remove();
                 });
