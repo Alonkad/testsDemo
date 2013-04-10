@@ -52,7 +52,7 @@ describe('Clock tests demo:', function () {
             });
         });
         describe('when the time is set to future time', function () {
-            it('should alert the user with a message when it\'s time', function () {
+            it('should alert the user with a message when it\'s time', function () {//TODO wording
                 var testMessage = "future alarm test";
 
                 this.setAlarm(testMessage, 1000);
@@ -65,23 +65,23 @@ describe('Clock tests demo:', function () {
         });
         describe('when the time is set to the past', function () {
             it('should NOT alert the user with a message', function () {
-                this.setAlarm('past alarm test', -1000);
+                this.setAlarm('past alarm test', -1000);//todo put the -1000 in var ~'pasttime'
 
                 jasmine.Clock.tick(2 * 365 * 24 * 60 * 60 * 1000);
                 expect(alert).not.toHaveBeenCalled();
             });
         });
         describe('when an alarm is added', function () {
-            it('should add an element to the current alarms', function () {
+            it('should add an element to the current alarms', function () {//todo terminology, wording
                 var numberOfAlarmsInAlarmsListBefore = $('#alarms').children().length;
                 this.setAlarm('test', 1000);
                 var numberOfAlarmsInAlarmsListAfter = $('#alarms').children().length;
 
-                expect(numberOfAlarmsInAlarmsListAfter - numberOfAlarmsInAlarmsListBefore).toBe(1);
+                expect(numberOfAlarmsInAlarmsListAfter).toBe(numberOfAlarmsInAlarmsListBefore + 1);
             });
         });
-        describe('when an alarm goes off', function () {
-            it('should remove the element from the current alarms', function () {
+        describe('when an alarm goes off', function () {        //todo refactor with previous test
+            it('should remove the element from the current alarms', function () {     //todo terminology, wording
                 this.setAlarm('when an alarn goes off', 7000);
 
                 expect($('#alarms').children().length).toBe(1);
@@ -92,11 +92,58 @@ describe('Clock tests demo:', function () {
             });
         });
         describe('when an alarm item is clicked', function () {
-            it('should be removed from the list', function () {
+            it('should be removed from the list', function () {  //todo terminology, wording
                 this.setAlarm('when an alarm item is clicked (remove from dom)', 7000);
                 var sampleLi = $('#alarms>li:first')[0];
                 sampleLi.click();
                 expect(sampleLi === $('#alarms>li:first')[0]).toBe(false);
+            });
+            //it('should remove the timeout', function () {
+
+            //});
+        });
+        describe('when an alarm item is clicked', function () {
+            beforeEach(function () {
+                this.addMatchers({
+                    toContainMessages: function (expected) {
+                        var mismatches = [];
+
+                        function itemHasExpectedMessage(item, index) {
+                            if ($(item).html() === expected[index]) {
+                                return true;
+                            }
+                            mismatches.push('[' + index + ']: actual is "' + $(item).html() + '", expected "' + expected[index] + '"');
+                        }
+
+                        this.message = function () {
+                            return this.isNot ?
+                                "Expected and actual are equal" :
+                                mismatches.join(',');
+                        };
+
+                        if (this.actual.length !== expected.length) {
+                            mismatches = ['actual contains ' + this.actual.length + ' items, expected ' + expected.length];
+                            return false;
+                        }
+
+                        this.actual.toArray().forEach(itemHasExpectedMessage);
+                        return mismatches.length === 0;
+                    }
+                })
+            });
+
+            it('should be removed from the list', function () {  //todo terminology, wording
+                this.setAlarm('Alarm 0', 7000);
+                this.setAlarm('Alarm 1', 7000);
+                this.setAlarm('Alarm 2', 7000);
+                this.setAlarm('Alarm 3', 7000);
+                this.setAlarm('Alarm 4', 7000);
+                var removedAlarm = $('#alarms>li')[2];
+
+                removedAlarm.click();
+
+                var updatedList = $('#alarms>li');
+                expect(updatedList).toContainMessages(['Alarm 0', 'Alarm 1', 'Alarm 3', 'Alarm 4']);
             });
             //it('should remove the timeout', function () {
 
