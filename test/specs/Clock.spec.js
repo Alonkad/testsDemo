@@ -9,6 +9,12 @@ describe('Clock tests demo:', function () {
         this.view.message.value = '';
         this.view.time.value = null;
 
+        this.setAlarm = function(message, msTillAlarm) {
+            this.view.message.value = message;
+            this.view.time.valueAsDate = new Date(Date.now() + msTillAlarm);
+            this.view.ok.click();
+        };
+
     });
 
     describe('acceptance', function () {
