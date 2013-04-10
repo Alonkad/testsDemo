@@ -18,7 +18,7 @@ var Clock = (function () {
                 var currentAlarm = alarmsList.find('li:last');
 
 
-                setTimeout(function(){
+                setTimeout(function () {
                     alert($('#message').val());
                     currentAlarm.remove();
                 }, msLeftToAlarm);

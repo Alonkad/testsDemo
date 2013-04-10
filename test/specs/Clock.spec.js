@@ -12,7 +12,7 @@ describe('Clock tests demo:', function () {
         jasmine.Clock.useMock();
         spyOn(window, 'alert');
 
-        this.setAlarm = function(message, msTillAlarm) {
+        this.setAlarm = function (message, msTillAlarm) {
             this.view.message.value = message;
             this.view.time.valueAsDate = new Date(Date.now() + msTillAlarm);
             this.view.ok.click();
