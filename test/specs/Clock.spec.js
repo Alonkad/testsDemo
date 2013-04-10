@@ -17,7 +17,10 @@ describe('Clock tests demo:', function () {
             this.view.time.valueAsDate = new Date(Date.now() + msTillAlarm);
             this.view.ok.click();
         };
+    });
 
+    afterEach(function () {
+        $('ul#alarms').empty();
     });
 
     describe('acceptance', function () {
