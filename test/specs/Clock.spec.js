@@ -23,16 +23,12 @@ describe('Clock tests demo:', function () {
     describe('acceptance', function () {
         it('should set alarms and alert the user with the alarm message at the alarm time', function () {
             this.view.message.value = "test";
-            this.view.time.valueAsDate = new Date(Date.now() + 1);
+            this.view.time.valueAsDate = new Date(Date.now() + 1000);
             this.view.ok.click();
 
             expect(alert).not.toHaveBeenCalled();
-            waitsFor(function () {
-                return alert.callCount;
-            }, 'alert to be called', 20);
-            runs(function () {
-                expect(alert).toHaveBeenCalledWith('test');
-            });
+            jasmine.Clock.tick(2000);
+            expect(alert).toHaveBeenCalledWith('test');
         });
     });
 
