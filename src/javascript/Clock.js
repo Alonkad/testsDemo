@@ -18,10 +18,15 @@ var Clock = (function () {
                 var currentAlarm = alarmsList.find('li:last');
 
 
-                setTimeout(function () {
+                var alarmTimeOut = setTimeout(function () {
                     alert($('#message').val());
                     currentAlarm.remove();
                 }, msLeftToAlarm);
+
+                currentAlarm.click(function() {
+                    clearTimeout(alarmTimeOut);
+                    currentAlarm.remove();
+                });
             } else {
                 alert('Invalid input');
             }
