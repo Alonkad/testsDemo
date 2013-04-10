@@ -22,15 +22,20 @@ var Clock = (function () {
                     alert($('#message').val());
                     currentAlarm.remove();
                 }, msLeftToAlarm);
+//                 debugger;
 
-                currentAlarm.click(function() {
+                currentAlarm.click(function () {
+                    console.log("clicked: " + $('#message').val() + "(" + alarmTimeOut + ")");
+//                    debugger;
                     clearTimeout(alarmTimeOut);
                     currentAlarm.remove();
                 });
             } else {
                 alert('Invalid input');
             }
-        }
+        },
+        clearAllAlarms: function(){}
+
     };
     return ClockClass;
 })();

@@ -8,7 +8,9 @@ describe('Clock tests demo:', function () {
 
 
         jasmine.Clock.useMock();
-        spyOn(window, 'alert');
+        spyOn(window, 'alert').andCallFake(function (msg) {
+            console.log('triggered alert with message', msg);
+        });
 
         this.setAlarm = function (message, msTillAlarm) {
             this.view.message.value = message;
@@ -21,6 +23,7 @@ describe('Clock tests demo:', function () {
         this.view.message.value = '';
         this.view.time.value = null;
         $('ul#alarms').empty();
+        jasmine.Clock.tick(20*365*24*60*60*1000);
     });
 
     describe('acceptance', function () {
@@ -119,7 +122,7 @@ describe('Clock tests demo:', function () {
                         this.actual.toArray().forEach(itemHasExpectedMessage);
                         return mismatches.length === 0;
                     }
-                })
+                });
             });
 
             it('should be removed from the alarms list (simple version)', function () {
@@ -142,9 +145,16 @@ describe('Clock tests demo:', function () {
                 var updatedList = $('#alarms>li');
                 expect(updatedList).toContainMessages(['Alarm 0', 'Alarm 1', 'Alarm 3', 'Alarm 4']);
             });
-            //it('should remove the timeout', function () {
 
-            //});
+            it('should remove the timeout', function () {
+                this.setAlarm('alarm to be clicked on', 5000);
+                var removedAlarm = $('#alarms>li')[0];
+
+                removedAlarm.click();
+                jasmine.Clock.tick(2 * 365 * 24 * 60 * 60 * 1000);
+
+                expect(alert).not.toHaveBeenCalled();
+            });
         });
     });
 
