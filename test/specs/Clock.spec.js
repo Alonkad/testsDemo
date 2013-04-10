@@ -1,6 +1,7 @@
 describe('Clock tests demo:', function () {
     beforeEach(function () {
         this.view = {};
+        //this.view.alarms = $('#alarms')[0];
         this.view.message = $('#message')[0];
         this.view.time = $('#time')[0];
         this.view.ok = $('#ok')[0];
@@ -77,7 +78,7 @@ describe('Clock tests demo:', function () {
                 this.view.time.valueAsDate = new Date(Date.now() - 1000);
                 this.view.ok.click();
 
-                jasmine.Clock.tick(2*365*24*60*60*1000);
+                jasmine.Clock.tick(2 * 365 * 24 * 60 * 60 * 1000);
                 expect(alert).not.toHaveBeenCalled();
             });
         });
@@ -98,17 +99,33 @@ describe('Clock tests demo:', function () {
             it('should remove the element from the current alarms', function () {
                 jasmine.Clock.useMock();
                 spyOn(window, 'alert'); //TODO: Is there another, better way to get rid of the alerts in testing?
-
                 this.view.message.value = "when an alarm goes off";
                 this.view.time.valueAsDate = new Date(Date.now() + 7000);
                 this.view.ok.click();
-                jasmine.Clock.tick(6900);
-                var numberOfAlarmsInAlarmsListBefore = $('#alarms').children().length;
-                jasmine.Clock.tick(200);
+
+                expect($('#alarms').children().length).toBe(1);
+                jasmine.Clock.tick(7000);
                 var numberOfAlarmsInAlarmsListAfter = $('#alarms').children().length;
 
-                expect(numberOfAlarmsInAlarmsListAfter - numberOfAlarmsInAlarmsListBefore).toBe(-1);
+                expect(numberOfAlarmsInAlarmsListAfter).toBe(0);
             });
+        });
+        describe('when an alarm item is clicked', function () {
+            it('should be removed from the list', function () {
+                jasmine.Clock.useMock();
+                spyOn(window, 'alert'); //TODO: Is there another, better way to get rid of the alerts in testing?
+
+                this.view.message.value = "when an alarm item is clicked (remove from dom)";
+                this.view.time.valueAsDate = new Date(Date.now() + 7000);
+                this.view.ok.click();
+                var sampleLi = $('#alarms>li:first')[0];
+                sampleLi.click();
+                sampleLi.remove();
+                expect(sampleLi === $('#alarms>li:first')[0]).toBe(false);
+            });
+            //it('should remove the timeout', function () {
+
+            //});
         });
     });
 
