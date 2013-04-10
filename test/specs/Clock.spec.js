@@ -9,6 +9,9 @@ describe('Clock tests demo:', function () {
         this.view.message.value = '';
         this.view.time.value = null;
 
+        jasmine.Clock.useMock();
+        spyOn(window, 'alert');
+
         this.setAlarm = function(message, msTillAlarm) {
             this.view.message.value = message;
             this.view.time.valueAsDate = new Date(Date.now() + msTillAlarm);
@@ -19,8 +22,6 @@ describe('Clock tests demo:', function () {
 
     describe('acceptance', function () {
         it('should set alarms and alert the user with the alarm message at the alarm time', function () {
-            spyOn(window, 'alert');
-
             this.view.message.value = "test";
             this.view.time.valueAsDate = new Date(Date.now() + 1);
             this.view.ok.click();
@@ -39,8 +40,6 @@ describe('Clock tests demo:', function () {
         describe('when the ok button is clicked', function () {
             describe('if the message is NOT set', function () {
                 it('should alert the user', function () {
-                    spyOn(window, 'alert');
-
                     this.view.time.valueAsDate = new Date(Date.now() - 1000);
                     this.view.ok.click();
 
@@ -49,8 +48,6 @@ describe('Clock tests demo:', function () {
             });
             describe('if the time is NOT set', function () {
                 it('should alert the user', function () {
-                    spyOn(window, 'alert');
-
                     this.view.message.value = "message without time";
                     this.view.ok.click();
 
@@ -60,8 +57,6 @@ describe('Clock tests demo:', function () {
         });
         describe('when the time is set to future time', function () {
             it('should alert the user with a message when it\'s time', function () {
-                jasmine.Clock.useMock();
-                spyOn(window, 'alert');
                 var testMessage = "future alarm test";
 
                 this.view.message.value = testMessage;
@@ -76,8 +71,6 @@ describe('Clock tests demo:', function () {
         });
         describe('when the time is set to the past', function () {
             it('should NOT alert the user with a message', function () {
-                jasmine.Clock.useMock();
-                spyOn(window, 'alert');
                 var testMessage = "past alarm test";
 
                 this.view.message.value = testMessage;
@@ -90,8 +83,6 @@ describe('Clock tests demo:', function () {
         });
         describe('when an alarm is added', function () {
             it('should add an element to the current alarms', function () {
-                jasmine.Clock.useMock();
-                spyOn(window, 'alert'); //TODO: Is there another, better way to get rid of the alerts in testing?
                 var numberOfAlarmsInAlarmsListBefore = $('#alarms').children().length;
                 this.view.message.value = "test";
                 this.view.time.valueAsDate = new Date(Date.now() + 1000);
@@ -103,8 +94,6 @@ describe('Clock tests demo:', function () {
         });
         describe('when an alarm goes off', function () {
             it('should remove the element from the current alarms', function () {
-                jasmine.Clock.useMock();
-                spyOn(window, 'alert'); //TODO: Is there another, better way to get rid of the alerts in testing?
                 this.view.message.value = "when an alarm goes off";
                 this.view.time.valueAsDate = new Date(Date.now() + 7000);
                 this.view.ok.click();
@@ -118,9 +107,6 @@ describe('Clock tests demo:', function () {
         });
         describe('when an alarm item is clicked', function () {
             it('should be removed from the list', function () {
-                jasmine.Clock.useMock();
-                spyOn(window, 'alert'); //TODO: Is there another, better way to get rid of the alerts in testing?
-
                 this.view.message.value = "when an alarm item is clicked (remove from dom)";
                 this.view.time.valueAsDate = new Date(Date.now() + 7000);
                 this.view.ok.click();
@@ -136,3 +122,4 @@ describe('Clock tests demo:', function () {
     });
 
 });
+
