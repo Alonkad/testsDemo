@@ -6,8 +6,7 @@ describe('Clock tests demo:', function () {
         this.view.time = $('#time')[0];
         this.view.ok = $('#ok')[0];
 
-        this.view.message.value = '';
-        this.view.time.value = null;
+
 
         jasmine.Clock.useMock();
         spyOn(window, 'alert');
@@ -20,6 +19,8 @@ describe('Clock tests demo:', function () {
     });
 
     afterEach(function () {
+        this.view.message.value = '';
+        this.view.time.value = null;
         $('ul#alarms').empty();
     });
 
