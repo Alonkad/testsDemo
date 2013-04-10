@@ -96,7 +96,6 @@ describe('Clock tests demo:', function () {
                 this.setAlarm('when an alarm item is clicked (remove from dom)', 7000);
                 var sampleLi = $('#alarms>li:first')[0];
                 sampleLi.click();
-                sampleLi.remove();
                 expect(sampleLi === $('#alarms>li:first')[0]).toBe(false);
             });
             //it('should remove the timeout', function () {
