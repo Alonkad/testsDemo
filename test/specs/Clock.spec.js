@@ -6,7 +6,6 @@ describe('Clock tests demo:', function () {
         this.view.time = $('#time')[0];
         this.view.ok = $('#ok')[0];
 
-        this.msInYear = 365 * 24 * 60 * 60 * 1000;
 
         jasmine.Clock.useMock();
         spyOn(window, 'alert');
@@ -68,7 +67,7 @@ describe('Clock tests demo:', function () {
             it('should NOT alert the user with a message', function () {
                 this.setAlarm('past alarm test', -1000);
 
-                jasmine.Clock.tick(2 * this.msInYear);
+                jasmine.Clock.tick(2 * 365 * 24 * 60 * 60 * 1000);
                 expect(alert).not.toHaveBeenCalled();
             });
         });
