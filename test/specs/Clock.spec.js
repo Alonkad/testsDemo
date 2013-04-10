@@ -25,9 +25,7 @@ describe('Clock tests demo:', function () {
 
     describe('acceptance', function () {
         it('should set alarms and alert the user with the alarm message at the alarm time', function () {
-            this.view.message.value = "test";
-            this.view.time.valueAsDate = new Date(Date.now() + 1000);
-            this.view.ok.click();
+            this.setAlarm('test', 1000);
 
             expect(alert).not.toHaveBeenCalled();
             jasmine.Clock.tick(2000);
@@ -39,8 +37,7 @@ describe('Clock tests demo:', function () {
         describe('when the ok button is clicked', function () {
             describe('if the message is NOT set', function () {
                 it('should alert the user', function () {
-                    this.view.time.valueAsDate = new Date(Date.now() - 1000);
-                    this.view.ok.click();
+                    this.setAlarm('', 1000);
 
                     expect(alert).toHaveBeenCalledWith('Invalid input');
                 });
@@ -58,9 +55,7 @@ describe('Clock tests demo:', function () {
             it('should alert the user with a message when it\'s time', function () {
                 var testMessage = "future alarm test";
 
-                this.view.message.value = testMessage;
-                this.view.time.valueAsDate = new Date(Date.now() + 1000);
-                this.view.ok.click();
+                this.setAlarm(testMessage, 1000);
 
                 jasmine.Clock.tick(900);
                 expect(alert).not.toHaveBeenCalled();
@@ -70,11 +65,7 @@ describe('Clock tests demo:', function () {
         });
         describe('when the time is set to the past', function () {
             it('should NOT alert the user with a message', function () {
-                var testMessage = "past alarm test";
-
-                this.view.message.value = testMessage;
-                this.view.time.valueAsDate = new Date(Date.now() - 1000);
-                this.view.ok.click();
+                this.setAlarm('past alarm test', -1000);
 
                 jasmine.Clock.tick(2 * 365 * 24 * 60 * 60 * 1000);
                 expect(alert).not.toHaveBeenCalled();
@@ -83,9 +74,7 @@ describe('Clock tests demo:', function () {
         describe('when an alarm is added', function () {
             it('should add an element to the current alarms', function () {
                 var numberOfAlarmsInAlarmsListBefore = $('#alarms').children().length;
-                this.view.message.value = "test";
-                this.view.time.valueAsDate = new Date(Date.now() + 1000);
-                this.view.ok.click();
+                this.setAlarm('test', 1000);
                 var numberOfAlarmsInAlarmsListAfter = $('#alarms').children().length;
 
                 expect(numberOfAlarmsInAlarmsListAfter - numberOfAlarmsInAlarmsListBefore).toBe(1);
@@ -93,9 +82,7 @@ describe('Clock tests demo:', function () {
         });
         describe('when an alarm goes off', function () {
             it('should remove the element from the current alarms', function () {
-                this.view.message.value = "when an alarm goes off";
-                this.view.time.valueAsDate = new Date(Date.now() + 7000);
-                this.view.ok.click();
+                this.setAlarm('when an alarn goes off', 7000);
 
                 expect($('#alarms').children().length).toBe(1);
                 jasmine.Clock.tick(7000);
@@ -106,9 +93,7 @@ describe('Clock tests demo:', function () {
         });
         describe('when an alarm item is clicked', function () {
             it('should be removed from the list', function () {
-                this.view.message.value = "when an alarm item is clicked (remove from dom)";
-                this.view.time.valueAsDate = new Date(Date.now() + 7000);
-                this.view.ok.click();
+                this.setAlarm('when an alarm item is clicked (remove from dom)', 7000);
                 var sampleLi = $('#alarms>li:first')[0];
                 sampleLi.click();
                 sampleLi.remove();
