@@ -1,10 +1,11 @@
-var Clock = (function () {
-    var ClockClass = function () {
+var Clock = function () {
+};
 
-    };
+Clock.prototype = _.extend(EventDispatcher, {
+    addAlarm: function (time, message) {
 
-    ClockClass.prototype = {
+    },
+    removeAlarm: function (time, message) {
 
     }
-    return ClockClass;
-})();
+});
