@@ -18,7 +18,7 @@ EventDispatcher.prototype = {
     },
 
     emit: function(event, args) {
-        var listeners = this._eventListeners && this._eventListeners['event'];
+        var listeners = this._eventListeners && this._eventListeners[event];
         if (listeners) {
             var eventArgs = _.tail(arguments);
             _.each(listeners, function(handler) {
