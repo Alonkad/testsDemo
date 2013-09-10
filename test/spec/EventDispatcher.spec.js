@@ -1,6 +1,7 @@
 describe('EventDispatcher', function () {
     var dispatcher;
     var handler;
+
     beforeEach(function () {
         dispatcher = new EventDispatcher();
         handler = jasmine.createSpy();

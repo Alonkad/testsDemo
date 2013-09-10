@@ -1,6 +1,6 @@
 describe('View integration tests', function () {
     describe('when an alarm is added', function () {
-        it('should be added to clock', function () {
+        it('should be added to the alarms list', function () {
             expect('test').toBe('implemented');
         });
 
